@@ -17,16 +17,17 @@
   <div class="container">
     <form id="form">
       <div class="mb-3">
-        <label for="allCount">총원: </label>
-        <input type="text" id="allCount" class="form-control" placeholder="현재 반의 총원을 입력해주세요.">
+        <label for="allCount" class="form-label">총원</label>
+        <input type="text" id="allCount" class="form-control" placeholder="(결석자 포함) 현재 반의 총원을 입력해주세요.">
       </div>
       <div class="mb-3">
-        <label for="teamCount">팀당 인원 수: </label>
-        <input type="text" id="teamCount" class="form-control" placeholder="나눠 떨어지지 않는 인원은 다른 팀에 분배됩니다.">
+        <label for="teamCount" class="form-label">팀당 인원 수</label>
+        <input type="text" id="teamCount" class="form-control"
+          placeholder="한 팀에 들어갈 인원수를 입력해주세요. 나누어 떨어지지 않는 인원은 다른 팀에 분배됩니다.">
       </div>
 
       <div class="mb-3">
-        <label for="absents">빠진 인원 출석 번호</label>
+        <label for="absents" class="form-label">빠진 인원(결석/퇴소) 출석 번호</label>
         <input type="text" id="absents" placeholder="띄어쓰기(space)로 구분" class="form-control">
       </div>
 
