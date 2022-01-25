@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Shuffle Students</title>
+</head>
+
+<body>
+  <h1 class="my-5 text-center">random.team</h1>
+
+  <div class="container">
+    <form id="form">
+      <div class="mb-3">
+        <label for="allCount">총원: </label>
+        <input type="text" id="allCount" class="form-control" placeholder="현재 반의 총원을 입력해주세요.">
+      </div>
+      <div class="mb-3">
+        <label for="teamCount">팀당 인원 수: </label>
+        <input type="text" id="teamCount" class="form-control" placeholder="나눠 떨어지지 않는 인원은 다른 팀에 분배됩니다.">
+      </div>
+
+      <div class="mb-3">
+        <label for="absents">빠진 인원 출석 번호</label>
+        <input type="text" id="absents" placeholder="띄어쓰기(space)로 구분" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <button class="btn btn-primary">SHUFFLE</button>
+      </div>
+    </form>
+
+    <ul id="resultList" class="px-0">
+
+    </ul>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+    integrity="sha256-qXBd/EfAdjOA2FGrGAG+b3YBn2tn5A6bhz+LSgYD96k=" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
