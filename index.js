@@ -11,7 +11,9 @@ form.addEventListener('submit', function (event) {
 
   const N = parseInt(allCount.value)
   const T = parseInt(teamCount.value)
-  const absentNumbers = absents.value.split(' ').map(Number)
+  
+  const absentNumbers = absents.value ? absents.value.split(' ').map(Number) : []
+  
   const lefts = (N-absentNumbers.length) % T
   const students = _.shuffle(_.range(1, N+1))
 
@@ -26,7 +28,7 @@ form.addEventListener('submit', function (event) {
     }
     console.log(teammates, currentStudents)
     
-    // teammates.sort((x, y) => x - y)
+    teammates.sort((x, y) => x - y)
     resultList.appendChild(createTeamInfo(i+1, teammates))
   }
 })
