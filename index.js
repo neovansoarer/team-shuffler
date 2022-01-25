@@ -21,12 +21,10 @@ form.addEventListener('submit', function (event) {
   const teamNo = parseInt((N - absentNumbers.length) / T)
   
   for (let i=0; i<teamNo; i++) {
-    console.log(lefts)
     const teammates = currentStudents.slice(i*T, (i+1)*T)
     if (i < lefts) {
       teammates.push(currentStudents[currentStudents.length - i-1])
     }
-    console.log(teammates, currentStudents)
     
     teammates.sort((x, y) => x - y)
     resultList.appendChild(createTeamInfo(i+1, teammates))
